@@ -1,12 +1,16 @@
 // vue.config.js
-
-/**
- * @type {import('@vue/cli-service').ProjectOptions}
- */
 module.exports = {
-    // options...
-    /*compilerOptions: {
-        isCustomElement : tag => tag.startsWith('bdl-')
-    }*/
-    runtimeCompiler: true
+    publicPath: './',
+    chainWebpack: config => {
+        config.module
+            .rule('vue')
+            .use('vue-loader')
+            .tap(options => {
+                options.compilerOptions = {
+                    ...options.compilerOptions,
+                    isCustomElement: tag => tag.startsWith('bdl-')
+                }
+                return options
+            })
+    }
 }
