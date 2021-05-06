@@ -8,7 +8,7 @@ module.exports = {
             .tap(options => {
                 options.compilerOptions = {
                     ...options.compilerOptions,
-                    isCustomElement: tag => tag.startsWith('bdl-')
+                    isCustomElement: tag => tag.startsWith('bdl-') || tag.startsWith('edit-')
                 }
                 return options
             })

@@ -7,10 +7,13 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
     <script src="https://cdn.jsdelivr.net/gh/creative-connections/Bodylight.js-Components/dist/bodylight.bundle.js"></script>
+    <script src="editword.js" defer></script>
 </head>
 <body aurelia-app="webcomponents">
+<h1>Web Components outside VUE3:</h1>
 <div class="w3-row">
     <div class="w3-third">
+        Chart:
         <bdl-chartjs
                 id="id9"
                 width="200"
@@ -24,6 +27,10 @@
                 refvalues="3"
                 animation="true"
         ></bdl-chartjs>
+
+        EditWord:
+
+        <p>Name: <edit-word>Tomas</edit-word> SurName: <edit-word>Kulhanek</edit-word></p>
     </div>
     <div class="w3-rest">
         <h1>Bodylight components usage</h1>
@@ -33,6 +40,7 @@
         </p>
     </div>
 </div>
+<h1>Web Components inside VUE3:</h1>
 <noscript>
     <strong
     >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
