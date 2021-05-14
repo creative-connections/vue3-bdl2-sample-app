@@ -6,8 +6,10 @@ import router from './router'
 
 //createApp(App).use(router).mount('#app')
 
-const app = createApp(App)
-app.use(router).mount('#app')
+const app = createApp(App);
+//if runtime compiler is used - ignore custom elements, same compiler option in vue.config.js
+app.config.isCustomElement = (tag) => tag.startsWith("edit-");
+app.use(router).mount('#app');
 
 /*
 import Vue from 'vue'
