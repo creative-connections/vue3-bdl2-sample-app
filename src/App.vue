@@ -1,4 +1,6 @@
 <template>
+  Vue3 without router Name <edit-word>John</edit-word> Surname: <edit-word>Smith</edit-word>
+
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/bodylight">Bodylight</router-link> |

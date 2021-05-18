@@ -8,7 +8,7 @@ import router from './router'
 
 const app = createApp(App);
 //if runtime compiler is used - ignore custom elements, same compiler option in vue.config.js
-app.config.isCustomElement = (tag) => tag.startsWith("edit-");
+app.config.isCustomElement = (tag) => tag.startsWith("edit-") || tag.startsWith('bdl-');
 app.use(router).mount('#app');
 
 /*
